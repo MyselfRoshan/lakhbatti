@@ -618,13 +618,26 @@ video {
   margin-bottom: -1.5rem;
 }
 
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
 }
 
 .mt-16 {
@@ -776,13 +789,13 @@ video {
   border-radius: 0.375rem;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .bg-accent {
   --tw-bg-opacity: 1;
   background-color: rgb(135 11 11 / var(--tw-bg-opacity));
+}
+
+.bg-black\/70 {
+  background-color: rgb(0 0 0 / 0.7);
 }
 
 .bg-gray-900 {
@@ -790,9 +803,9 @@ video {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
-.bg-indigo-600 {
+.bg-secondary {
   --tw-bg-opacity: 1;
-  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+  background-color: rgb(252 126 26 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -874,8 +887,12 @@ video {
   padding-left: 4rem;
 }
 
-.pt-14 {
-  padding-top: 3.5rem;
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .text-center {
@@ -929,6 +946,16 @@ video {
 
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.text-gray-50 {
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
 }
 
 .text-gray-600 {
@@ -1000,13 +1027,17 @@ video {
   background-position: center;
   background-size: cover;
   /* background-color: rgba(255, 255, 255, 0.22); */
-  background-color: hsla(0, 0%, 0%, 0.9);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* background-color: hsla(0, 0%, 0%, 0.9); */
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
   /* backdrop-filter: blur(8.2px);
   -webkit-backdrop-filter: blur(8.2px); */
-  transition: background-image 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
   -webkit-backdrop-filter: blur(1.5rem);
           backdrop-filter: blur(1.5rem);
+}
+
+#map {
+  height: 520px;
 }
 
 .hover\:bg-accent\/80:hover {
@@ -1067,6 +1098,10 @@ video {
   .sm\:py-48 {
     padding-top: 12rem;
     padding-bottom: 12rem;
+  }
+
+  .sm\:pt-32 {
+    padding-top: 8rem;
   }
 
   .sm\:text-4xl {

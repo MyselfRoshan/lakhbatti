@@ -17,10 +17,14 @@
   background-position: center;
   background-size: cover;
   /* background-color: rgba(255, 255, 255, 0.22); */
-  background-color: hsla(0, 0%, 0%, 0.9);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* background-color: hsla(0, 0%, 0%, 0.9); */
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
   /* backdrop-filter: blur(8.2px);
   -webkit-backdrop-filter: blur(8.2px); */
-  transition: background-image 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
   backdrop-filter: blur(1.5rem);
+}
+
+#map {
+  height: 520px;
 }

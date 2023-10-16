@@ -1,19 +1,10 @@
 const heroSection = document.getElementById("hero-section");
 
-// const imageUrls = [
-//   "https://source.unsplash.com/1366x720/?nature",
-//   "https://source.unsplash.com/1366x720/?architecture",
-//   "https://source.unsplash.com/1366x720/?travel",
-//   "https://source.unsplash.com/1366x720/?technology",
-//   "https://source.unsplash.com/1366x720/?food",
-// ];
-
 const imageUrls = [
   "/src/assets/images/c1.jpg",
   "/src/assets/images/c2.jpg",
   "/src/assets/images/c3.jpg",
   "/src/assets/images/c4.jpg",
-  "/src/assets/images/c5.jpg",
   // "https://source.unsplash.com/1366x720/?architecture",
   // "https://source.unsplash.com/1366x720/?travel",
   // "https://source.unsplash.com/1366x720/?technology",
