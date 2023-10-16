@@ -5,10 +5,6 @@ const imageUrls = [
   "/src/assets/images/c2.jpg",
   "/src/assets/images/c3.jpg",
   "/src/assets/images/c4.jpg",
-  // "https://source.unsplash.com/1366x720/?architecture",
-  // "https://source.unsplash.com/1366x720/?travel",
-  // "https://source.unsplash.com/1366x720/?technology",
-  // "https://source.unsplash.com/1366x720/?food",
 ];
 
 let currentImageIndex = 0;
