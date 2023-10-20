@@ -11,6 +11,9 @@
   height: 520px;
 }
 
-#nav-to-toggle {
-  /* translate: 0 -20% 30rem; */
+.logo {
+  box-shadow: inset 0px 0px 40px 15px hsla(0, 0%, 100%, 0.9),
+    0px 0px 40px 15px hsl(0, 0%, 100%, 0.9),
+    0px 0px 25px 5px hsl(27, 97%, 55%, 0.8),
+    0px 0px 20px 10px hsl(37, 100%, 55%, 0.5);
 }
