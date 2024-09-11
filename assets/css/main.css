@@ -1,0 +1,330 @@
+/* Box sizing rules*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margin, padding and font-size */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Allow percentage-based heights in the application */
+html,
+body {
+    height: 100%;
+}
+
+/* Set core root defaults */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+a.primary-nav__link,
+a.nav-link {
+    text-decoration: none;
+}
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+    filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Remove animations and transition on window resize */
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Custom CSS */
+
+/* Root */
+
+:root {
+    --black-clr: hsl(0, 0%, 0%);
+
+    --white-clr: hsl(0, 0%, 100%);
+
+    --primary-clr-1000: hsl(215, 100%, 52%);
+    --accent-clr-1000: hsl(161, 100%, 45%);
+
+    --text-clr: hsl(0, 0%, 20%);
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 2rem;
+    --fs-700: 3rem;
+    --fs-900: 4rem;
+
+    --ff-sans: "Poppins", sans-serif;
+
+    --fw-100: 100;
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --fw-900: 900;
+}
+/* 640px */
+@media (min-width: 40em) {
+}
+/* 768px */
+@media (min-width: 48em) {
+}
+/* 1024px */
+@media (min-width: 60em) {
+}
+/* 1280px */
+@media (min-width: 80em) {
+}
+/* 1440px */
+@media (min-width: 90em) {
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: var(--text-clr);
+}
+/* Header */
+
+.topbar {
+    background-color: var(--primary-clr-1000);
+}
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+}
+
+.topbar__contacts {
+    display: flex;
+    gap: 1rem;
+}
+
+.topbar__contact-details {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--white-clr);
+}
+
+.topbar__contact-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.topbar__contact-text {
+    font-weight: var(--fw-400);
+    font-size: var(--fs-300);
+}
+
+.topbar__socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.topbar__social-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.btn.outline {
+    --btn-clr: var(--white-clr);
+    --btn-txt-clr: var(--primary-clr-1000);
+    border: 1px solid var(--primary-clr-1000);
+}
+
+.primary-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75rem 1rem;
+}
+
+.primary-nav__items {
+    cursor: pointer;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.primary-nav__item {
+    position: relative;
+}
+
+.primary-nav__item::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-end: -0.5rem;
+    height: 2px;
+    width: 100%;
+    background-color: var(--accent-clr-1000);
+    scale: 0;
+    translate: -50% 0;
+    transform-origin: center;
+    transition: scale 350ms ease-in;
+}
+
+.primary-nav__item:hover::after {
+    transition: scale 250ms ease-out;
+    scale: 1;
+}
+
+.primary-nav__link {
+    color: var(--text-clr);
+}
+
+.primary-nav__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Hero */
+.hero {
+    background-image: url("/assets/images/hero.png");
+    /* background-size: contain; */
+    background-size: cover;
+
+    /* min-height: 550px; */
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+    padding: 8.75rem 1rem;
+}
+
+.hero__content {
+    /* 140px */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--white-clr);
+}
+
+.hero__preheading {
+    text-transform: uppercase;
+    font-weight: var(--fw-600);
+    font-size: var(--fs-500);
+    line-height: 30px;
+}
+
+.hero__heading {
+    width: 19ch;
+    font-weight: var(--fw-600);
+    font-size: var(--fs-900);
+
+    line-height: 84px;
+    /* color: var(--white-clr); */
+}
+
+.hero__btns {
+    padding-top: 2rem;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+}
+.btn.icon {
+    --btn-clr: var(--white-clr);
+    --btn-txt-clr: var(--primary-clr-1000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+}
+/* Footer */
+
+/* Utilities */
+.container {
+    max-width: 80rem;
+    margin-inline: auto;
+    /* padding-inline: 1rem; */
+}
+
+.btn {
+    text-transform: capitalize;
+    background-color: var(--btn-clr, var(--primary-clr-1000));
+    color: var(--btn-txt-clr, var(--white-clr));
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: var(--fs-300);
+    font-weight: var(--fw-500);
+}
+
+.btn.large {
+    padding: 0.75rem 2.25rem;
+}
+
+/* Media Queries */
+/* @media (min-width: 40em) {
+    .container {
+        max-width: 90rem;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .container {
+        max-width: 90rem;
+    }
+} */
