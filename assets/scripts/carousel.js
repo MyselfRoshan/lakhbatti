@@ -1,18 +1,37 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var splide = new Splide("#storiesCards", {
+document.addEventListener("DOMContentLoaded", () => {
+    let storiesSlider = new Splide("#storiesCards", {
         type: "loop",
-        // perPage: 4,
-        height: "18.75rem",
-        autoHeight: true,
+        fixedWidth: "262px",
+        height: "22.5rem",
         gap: "1.5rem",
         wheel: true,
+        wheelSleep: 100,
+        waitForTransition: true,
+        wheelMinThreshold: 30,
         autoplay: true,
         interval: 4000,
-        flickMaxPages: 3,
-        flickPower: 500,
+        // flickMaxPages: 1,
+        // flickPower: 5,
         arrows: false,
         // fixedHeight: 500,
     })
-    splide.mount()
-    console.log(splide)
+    storiesSlider.mount()
+
+    let bookItemGallerySlider = new Splide("#bookItemGallerySlider", {
+        type: "loop",
+        fixedWidth: "430px",
+        height: "21.875rem",
+        width: "500px",
+        gap: "1rem",
+        wheel: true,
+        wheelSleep: 100,
+        waitForTransition: true,
+        wheelMinThreshold: 30,
+        autoplay: true,
+        interval: 4000,
+        arrows: false,
+    })
+    bookItemGallerySlider.mount()
+    // console.log(servicesSlider, storiesSlider)
+    // console.log(storiesSlider)
 })
