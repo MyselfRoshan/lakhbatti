@@ -4,16 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <!-- Fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        /> -->
-    <!-- End of Fonts -->
+    <title>Lakhbatti</title>
 
     <!-- Splide Carousel -->
     <link rel="stylesheet" href="/assets/library/splide.min.css" />
@@ -25,7 +16,8 @@
     <!-- End of Styles -->
 
     <!-- Scripts -->
-    <script defer src="/assets/scripts/carousel.js"></script>
+    <script defer src="/assets/scripts/nav-toggler.js"></script>
+    <script defer src="/assets/scripts/slider.js"></script>
     <!-- End of Scripts -->
 </head>
 
@@ -35,7 +27,7 @@
         <div class="topbar grid-container">
             <div class="content topbar__wrapper">
                 <div class="topbar__contacts">
-                    <div class="topbar__contact-details">
+                    <a href="tel:+61XXXXXXXXX" class="topbar__contact-details">
                         <div class="topbar__contact-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -47,8 +39,8 @@
                         <div class="topbar__contact-text">
                             +61 XXXXXXXXX
                         </div>
-                    </div>
-                    <div class="topbar__contact-details">
+                    </a>
+                    <a href="mailto:info@lakhbatti.com" class="topbar__contact-details">
                         <div class="topbar__contact-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -63,8 +55,8 @@
                         <div class="topbar__contact-text">
                             info@lakhbatti.com
                         </div>
-                    </div>
-                    <div class="topbar__contact-details">
+                    </a>
+                    <a class="topbar__contact-details">
                         <div class="topbar__contact-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +70,7 @@
                         <div class="topbar__contact-text">
                             Mon - Fri: 9am - 5pm
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="full-width topbar__social">
                     <div class="topbar__social-icon">
@@ -135,7 +127,7 @@
                 </div>
             </div>
         </div>
-        <nav class="primary-nav grid-container">
+        <nav class="primary-nav grid-container desktop-nav">
             <div class="content primary-nav__wrapper">
                 <div class="logo">
                     <svg width="122" height="28" viewBox="0 0 122 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -193,7 +185,7 @@
                 </div>
             </div>
         </nav>
-        <nav class="primary-nav grid-container">
+        <div class="primary-nav grid-container mobile-nav">
             <div class="content primary-nav__wrapper">
                 <div class="logo">
                     <svg width="122" height="28" viewBox="0 0 122 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -228,7 +220,7 @@
                             fill="#00E59E" />
                     </svg>
                 </div>
-                <div id="open-nav" class="burger">
+                <button id="open-nav" class="primary-nav__opener">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-menu">
@@ -236,10 +228,10 @@
                         <line x1="4" x2="20" y1="6" y2="6" />
                         <line x1="4" x2="20" y1="18" y2="18" />
                     </svg>
-                </div>
+                </button>
             </div>
-        </nav>
-        <div id="nav-to-toggle" class="primary-nav__slider">
+        </div>
+        <nav id="nav-to-toggle" class="primary-nav__slider">
             <ul class="primary-nav__items">
                 <li class="primary-nav__item">
                     <a href="/" class="primary-nav__link">Home</a>
@@ -261,7 +253,15 @@
                 <button class="btn outline">Login/Register</button>
                 <button class="btn">Book Service</button>
             </div>
-        </div>
+            <button type="button" id="close-nav" class="primary-nav__closer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </button>
+        </nav>
     </header>
     <!-- End Header -->
     <main>
@@ -2008,15 +2008,6 @@
                             class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i
                             class="leaf"></i><i class="leaf"></i><i class="leaf"></i>
                     </div>
-
-                    <div class="circles">
-                        <i class="circle"></i>
-                        <i class="circle"></i>
-                        <i class="circle"></i>
-                        <i class="circle"></i>
-                        <i class="circle"></i>
-                        <i class="circle"></i>
-                    </div>
                 </div>
                 <div class="more-services__wrapper">
                     <div class="more-services__img-wrapper">
@@ -2843,7 +2834,7 @@
                                 <div class="book__item__gallery-info">
                                     <p>Service gallery</p>
                                     <div class="separater"></div>
-                                    <span>(4 images)</span>
+                                    <span id="bookItemGalleryImgsCount">(10 images)</span>
                                 </div>
                             </div>
                             <section id="bookItemGallerySlider" class="book__item__gallery-slider splide">
@@ -2899,9 +2890,6 @@
                                                 <img src="/assets/images/booked-item/item-1.png" alt="" />
                                             </div>
                                         </li>
-                                        <!-- <div class="item" style="--position: 5;">
-                                                <img src="/assets/images/booked-item/item-1.png" alt="" />
-                                            </div> -->
                                     </ul>
                                 </div>
                             </section>
@@ -2950,15 +2938,6 @@
                         class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i
                         class="leaf"></i><i class="leaf"></i><i class="leaf"></i>
                 </div>
-
-                <div class="circles">
-                    <i class="circle"></i>
-                    <i class="circle"></i>
-                    <i class="circle"></i>
-                    <i class="circle"></i>
-                    <i class="circle"></i>
-                    <i class="circle"></i>
-                </div>
             </div>
         </div>
     </section>
@@ -2972,7 +2951,7 @@
                 <div class="columns footer__contact">
                     <h2 class="footer__title">Contact US</h2>
                     <!-- <div class="icon-list"> -->
-                    <div class="icon-list__item">
+                    <a href="/contact-us" class="icon-list__item">
                         <div class="icon-list__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -2986,8 +2965,8 @@
                             60 East Side 65th Street NY 10065
                             Queensland, Australia
                         </span>
-                    </div>
-                    <div class="icon-list__item">
+                    </a>
+                    <a href="tel:+61XXXXXXXXX" class="icon-list__item">
                         <div class="icon-list__icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2998,8 +2977,8 @@
                             </svg>
                         </div>
                         <span class="icon-list__text">+61 XXXXXXXXX</span>
-                    </div>
-                    <div class="icon-list__item">
+                    </a>
+                    <a href="mailto:info@lakhbatti.com" class="icon-list__item">
                         <div class="icon-list__icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -3014,7 +2993,7 @@
                         <span class="icon-list__text">
                             info@lakhbatti.com
                         </span>
-                    </div>
+                    </a>
                     <!-- </div> -->
                     <!-- <div class="footer__social"> -->
                     <span class="footer__social-title">
