@@ -43,7 +43,6 @@ html {
 
 /* Set core body defaults */
 body {
-    font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
 }
@@ -261,7 +260,7 @@ h2 {
 }
 
 .grid-container {
-    overflow-x: clip;
+    /* overflow-x: clip; */
 
     display: grid;
     grid-template-columns:
@@ -725,10 +724,13 @@ h2 {
 
 .services .bg-img {
     overflow: clip;
-    position: absolute;
-    z-index: -1;
-    inset-block-end: 0;
-    inset-inline-end: -438px;
+
+    img{
+        position: absolute;
+        z-index: -1;
+        inset-block-end: 0;
+        inset-inline-end: -438px;
+    }
 }
 
 .services__wrapper {
@@ -997,15 +999,7 @@ h2 {
         > * {
             grid-area: stack;
         }
-        .solutions__item-img {
-            /* overlay */
-            /* border-image: linear-gradient(
-                    hsla(0, 0%, 100%, 0.3),
-                    hsla(0, 0%, 100%, 0.7)
-                )
-                fill 1; */
-            /* filter: blur(2rem); */
-        }
+
         div:has(.solutions__item-title) {
             place-self: center;
         }
@@ -1171,6 +1165,9 @@ h2 {
 /* End of Popular Solutions */
 
 /* Our Protfolio */
+.portfolio {
+    overflow-x: clip;
+}
 .portfolio__wrapper {
     margin-block: clamp(3rem, 9vw, 6.25rem);
 }
@@ -1549,6 +1546,7 @@ h2 {
 
 .book__item-card {
     position: relative;
+    overflow-x: clip;
 
     background-image: url("/assets/images/flower-pattern.svg");
     background-color: var(--secondary-clr-900);
