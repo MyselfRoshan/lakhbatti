@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
         wheelSleep: 100,
         waitForTransition: true,
         wheelMinThreshold: 30,
+        perPage:4,
         autoplay: true,
         interval: 4000,
         arrows: false,
+        lazyLoad: 'nearby',
     })
     storiesSlider.mount()
 
