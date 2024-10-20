@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Poppins";
-    src: url("/assets/fonts/poppins-variable.woff2") format("woff2");
+    src: url("../fonts/poppins-variable.woff2") format("woff2");
     font-weight: 100 900;
     font-style: normal;
 }
@@ -338,7 +338,7 @@ h2 {
         width: 36px;
         height: 37px;
         background-repeat: no-repeat;
-        background-image: url("/assets/images/leaf.svg");
+        background-image: url("../images/leaf.svg");
         transform-origin: center;
         opacity: 0.8;
     }
@@ -1677,7 +1677,7 @@ h2 {
     position: relative;
     overflow-x: clip;
 
-    background-image: url("/assets/images/flower-pattern.svg");
+    background-image: url("../images/flower-pattern.svg");
     background-color: var(--secondary-clr-900);
     border-top-left-radius: 1rem;
 }
