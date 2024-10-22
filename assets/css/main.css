@@ -273,6 +273,11 @@ h2 {
         [content-start breakout-right-start] min(100% - var(--_gap) * 2, 80rem)
         [content-end breakout-left-end] minmax(var(--_gap), 1fr)
         [full-width-end breakout-right-end];
+    /* grid-template-columns:
+        [full-width-start breakout-left-start] minmax(var(--_gap), 1fr)
+        [content-start breakout-right-start] min(100% - var(--_gap) * 2, 82.5rem)
+        [content-end breakout-left-end] minmax(var(--_gap), 1fr)
+        [full-width-end breakout-right-end]; */
 
     @media (width <=768px) {
         --_gap: 1rem;
@@ -596,6 +601,7 @@ h2 {
 }
 
 .primary-nav__link {
+    font-weight: var(--fw-500);
     color: var(--text-clr);
 }
 
@@ -722,6 +728,10 @@ h2 {
             display: none;
         }
     }
+
+    .columns:first-child{
+        justify-self: start;
+    }
 }
 
 .hero__content {
@@ -782,7 +792,7 @@ h2 {
     min-height: 400px;
 
     @media (width > 600px) {
-        margin-bottom: clamp(3rem, 9vw, 6.25rem);
+        margin-block-end: clamp(3rem, 9vw, 6.25rem);
     }
 }
 
@@ -828,7 +838,12 @@ h2 {
     }
 
     @media (width > 1200px) {
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 188px), 1fr));
+    }
+
+    @media (width > 1400px) {
+        /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 185px), 1fr)); */
+        grid-template-columns: repeat(3,max(270px,1fr));
     }
 }
 
@@ -1158,7 +1173,7 @@ h2 {
 
 .solutions__card-img {
     width: 100%;
-    min-height: 210px;
+    height: 210px;
 
     img {
         width: 100%;
@@ -1221,7 +1236,6 @@ h2 {
 }
 
 .portfolio__wrapper {
-    margin-block: clamp(3rem, 9vw, 6.25rem);
 }
 
 .portfolio__header {
@@ -1537,7 +1551,7 @@ h2 {
 
 /* Book */
 .book__wrapper {
-    margin-block: clamp(3rem, 9vw, 6.25rem);
+    margin-block-end: clamp(3rem, 9vw, 6.25rem);
 
     display: grid;
     gap: 8rem;
@@ -1679,7 +1693,7 @@ h2 {
 
     background-image: url("../images/flower-pattern.svg");
     background-color: var(--secondary-clr-900);
-    border-top-left-radius: 1rem;
+    border-top-left-radius: 2.25rem;
 }
 
 .book__item-title {
