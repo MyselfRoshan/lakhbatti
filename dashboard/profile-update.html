@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../assets/css/dashboard/main.css" />
+
+    <script defer src="../assets/library/iconify.min.js"></script>
+  </head>
+  <body>
+    <div class="dashboard__wrapper">
+      <div class="back">
+        <button class="back__btn">
+          <span class="btn-icon">
+            <i class="iconify" data-icon="material-symbols:arrow-back"></i>
+          </span>
+          <span class="btn-text">Back</span>
+        </button>
+        <!-- <div class="user-profile__img">
+          <img src="../assets/images/avatar.png" alt="Cat Winter" />
+        </div>
+        <span class="welcome__msg">Welcome 👋</span>
+        <span class="username">Suresh Sapkota</span> -->
+      </div>
+
+      <main>
+        <section class="profile">
+          <header class="profile__header">
+            <h2>Update profile</h2>
+          </header>
+
+          <form class="profile__update-form" action="">
+            <label class="input-wrapper">
+              <span class="label">Bank Name</span>
+              <input type="text" name="bank_name" id="bank_name" />
+            </label>
+
+            <label class="input-wrapper">
+              <span class="label">Bank Account</span>
+              <input
+                type="text"
+                inputmode="numeric"
+                name="bank_account"
+                id="bank_account"
+              />
+            </label>
+
+            <label class="input-wrapper">
+              <span class="label">Verification Id</span>
+              <input type="text" name="verification_id" id="verification_id" />
+            </label>
+
+            <label class="input-wrapper">
+              <span class="label">Contact Name</span>
+              <input type="text" name="contact_name" id="contact_name" />
+            </label>
+
+            <label class="input-wrapper">
+              <span class="label">Contact Number</span>
+              <input
+                type="text"
+                inputmode="numeric"
+                name="contact_number"
+                id="contact_number"
+              />
+            </label>
+
+            <button class="btn">Update profile</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer__nav">
+        <nav class="primary__nav">
+          <a href="./index.html" class="nav__link">
+            <i class="iconify" data-icon="material-symbols:home"> </i>
+            <span>Home</span>
+          </a>
+
+          <a href="./clients.html" class="nav__link">
+            <i
+              class="iconify"
+              data-icon="material-symbols:supervisor-account-outline"
+            >
+            </i>
+            <span>Clients</span>
+          </a>
+
+          <a href="./tasks.html" class="nav__link">
+            <i class="iconify" data-icon="material-symbols:task"></i>
+            <span>My Tasks</span>
+          </a>
+
+          <a href="./help.html" class="nav__link">
+            <i class="iconify" data-icon="material-symbols:help-center-outline">
+            </i>
+            <span>Help</span>
+          </a>
+
+          <a href="./profile.html" class="nav__link active">
+            <i class="iconify" data-icon="material-symbols:account-box-outline">
+            </i>
+            <span>Profile</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

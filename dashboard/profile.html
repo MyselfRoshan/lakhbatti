@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../assets/css/dashboard/main.css" />
+
+    <script defer src="../assets/library/iconify.min.js"></script>
+  </head>
+  <body>
+    <div class="dashboard__wrapper">
+      <header class="user-profile">
+        <div class="user-profile__img">
+          <img src="../assets/images/avatar.png" alt="Cat Winter" />
+        </div>
+        <span class="welcome__msg">Welcome 👋</span>
+        <span class="username">Suresh Sapkota</span>
+      </header>
+
+      <main>
+        <section class="profile">
+          <header class="profile__header">
+            <h2>Profile</h2>
+            <a href="./profile-update.html">Update profile</a>
+          </header>
+          <div class="profile__card">
+            <h3>Bank Details</h3>
+            <div class="icon-text__group">
+              <i
+                class="iconify"
+                data-icon="material-symbols:account-balance"
+              ></i>
+              <span class="icon-text"> Bank Name: </span>
+            </div>
+            <div class="profile__card-details">
+              <span>Himalayan Bank Limited</span>
+              <small>0000178567890</small>
+            </div>
+          </div>
+          <div class="profile__card">
+            <h3>Verification Details</h3>
+            <div class="icon-text__group">
+              <i class="iconify" data-icon="material-symbols:verified"></i>
+              <span class="icon-text"> ID: Verified </span>
+            </div>
+            <div class="profile__card-details">
+              <span>Passport</span>
+            </div>
+          </div>
+          <div class="profile__card">
+            <h3>Emergency Contacts</h3>
+            <div class="icon-text__group">
+              <i
+                class="iconify"
+                data-icon="material-symbols:contact-emergency"
+              ></i>
+              <span class="icon-text">Ram Krishna</span>
+            </div>
+            <div class="profile__card-details">
+              <span>9846311234</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer__nav">
+        <nav class="primary__nav">
+          <a href="./index.html" class="nav__link">
+            <i class="iconify" data-icon="material-symbols:home"> </i>
+            <span>Home</span>
+          </a>
+
+          <a href="./clients.html" class="nav__link">
+            <i
+              class="iconify"
+              data-icon="material-symbols:supervisor-account-outline"
+            >
+            </i>
+            <span>Clients</span>
+          </a>
+
+          <a href="./tasks.html" class="nav__link">
+            <i class="iconify" data-icon="material-symbols:task"></i>
+            <span>My Tasks</span>
+          </a>
+
+          <a href="./help.html" class="nav__link">
+            <i class="iconify" data-icon="material-symbols:help-center-outline">
+            </i>
+            <span>Help</span>
+          </a>
+
+          <a href="./profile.html" class="nav__link active">
+            <i class="iconify" data-icon="material-symbols:account-box-outline">
+            </i>
+            <span>Profile</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

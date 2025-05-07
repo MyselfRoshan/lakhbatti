@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lakhbatti</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/library/scrollable-tabs.css" />
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
+    <!-- End of Styles -->
+
+    <!-- Scripts -->
+    <script defer src="./assets/library/iconify.min.js"></script>
+    <script type="module" src="./assets/scripts/dashboard.js"></script>
+    <!-- End of Scripts -->
+  </head>
+  <body>
+    <div class="dashboard-wrapper">
+      <aside class="dashboard-sidebar">
+        <div class="user-profile">
+          <div class="user-profile-img">
+            <img src="./assets/images/avatar.png" alt="Cat Winter" />
+          </div>
+          <span class="user-name">Suresn Sapkota</span>
+          <span class="user-phoneno">9846210550</span>
+        </div>
+        <div class="summaries">
+          <div class="summary">
+            <span class="summary-value">$700</span>
+            <span class="summary-title">Total collected</span>
+          </div>
+          <div class="summary">
+            <span class="summary-value">35</span>
+            <span class="summary-title">Total Tasks</span>
+          </div>
+          <div class="summary">
+            <span class="summary-value">48</span>
+            <span class="summary-title">Total hrs</span>
+          </div>
+        </div>
+
+        <div class="invoice-card">
+          <div class="invoice-availability">
+            <span>Available</span>
+            <button class="btn btn-primary">Download invoice</button>
+          </div>
+          <div class="invoice-time">
+            <span class="invoice-time-from">From: 15/12/2024</span>
+            <span class="invoice-time-to">To: 29/12/2024</span>
+          </div>
+          <div class="invoice-instruction">
+            Download your available invoice and email to
+            <a href="maito:cleaningperfecto@gmail.com">
+              cleaningperfecto@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="user-informations">
+          <div class="user-information">
+            <div class="user-information-title">
+              Bank details
+              <button class="user-information-edit-btn">
+                <i
+                  class="iconify"
+                  data-icon="material-symbols-light:edit-outline"
+                ></i>
+              </button>
+            </div>
+            <div class="user-information-values">
+              <i
+                class="iconify"
+                data-icon="material-symbols-light:account-balance-outline"
+              ></i>
+              <span class="user-information-value-title">Bank name:</span>
+              <span class="user-information-value">Himalayan Bank Limited</span>
+              <span class="user-information-value">0000178567890</span>
+            </div>
+          </div>
+
+          <div class="user-information">
+            <div class="user-information-title">
+              Verification
+              <button class="user-information-edit-btn">
+                <i
+                  class="iconify"
+                  data-icon="material-symbols-light:edit-outline"
+                ></i>
+              </button>
+            </div>
+            <div class="user-information-values">
+              <i
+                class="iconify"
+                data-icon="material-symbols:verified-outline"
+              ></i>
+              <span class="user-information-value-title">ID: Verified</span>
+              <span class="user-information-value">Passport</span>
+            </div>
+          </div>
+
+          <div class="user-information">
+            <div class="user-information-title">
+              Emergency Contacts
+              <button class="user-information-edit-btn">
+                <i
+                  class="iconify"
+                  data-icon="material-symbols-light:edit-outline"
+                ></i>
+              </button>
+            </div>
+            <div class="user-information-values">
+              <i
+                class="iconify"
+                data-icon="material-symbols-light:contact-emergency-outline"
+              ></i>
+              <span class="user-information-value-title">Ram Krishna</span>
+              <span class="user-information-value">9846311234</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="help-card">
+          <div class="help-card-header">
+            <h2>Looking for help</h2>
+            <span>Get touch in whatsapp</span>
+          </div>
+
+          <div class="help-card-user">
+            <h3>
+              <svg
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 16.5C12.4183 16.5 16 12.9183 16 8.5C16 4.08173 12.4183 0.5 8 0.5C3.58173 0.5 0 4.08173 0 8.5C0 12.9183 3.58173 16.5 8 16.5Z"
+                  fill="#25D366"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.26383 12.9511H8.26186C7.4657 12.9508 6.6834 12.7511 5.98856 12.3721L3.4668 13.0336L4.14166 10.5685C3.72536 9.84711 3.50633 9.02874 3.50666 8.19034C3.50773 5.56748 5.64173 3.43359 8.26376 3.43359C9.53633 3.43414 10.7307 3.92954 11.6289 4.82874C12.527 5.72788 13.0213 6.92304 13.0208 8.19411C13.0198 10.8163 10.8866 12.95 8.26383 12.9511ZM6.10543 11.5109L6.2498 11.5966C6.85686 11.9568 7.55273 12.1474 8.26223 12.1477H8.26383C10.4431 12.1477 12.2168 10.374 12.2176 8.19381C12.2181 7.13734 11.8072 6.14394 11.0607 5.39658C10.3142 4.64921 9.32146 4.23744 8.26536 4.23708C6.08443 4.23708 4.31073 6.01064 4.30986 8.19061C4.30956 8.93771 4.5186 9.66531 4.91436 10.2948L5.0084 10.4444L4.60896 11.9034L6.10543 11.5109ZM10.4976 9.21828C10.5805 9.25834 10.6365 9.28541 10.6604 9.32531C10.6901 9.37488 10.6901 9.61284 10.5911 9.89054C10.492 10.1682 10.0171 10.4216 9.78876 10.4557C9.584 10.4863 9.32483 10.4991 9.0401 10.4086C8.86746 10.3538 8.6461 10.2807 8.3625 10.1582C7.2482 9.67708 6.49513 8.59704 6.3528 8.39294C6.34283 8.37864 6.33586 8.36864 6.33196 8.36344L6.33103 8.36218C6.26813 8.27824 5.84663 7.71588 5.84663 7.13384C5.84663 6.58634 6.11556 6.29938 6.23936 6.16728C6.24786 6.15821 6.25566 6.14988 6.26263 6.14228C6.3716 6.02328 6.50036 5.99351 6.5796 5.99351C6.65883 5.99351 6.73816 5.99424 6.80743 5.99771C6.81596 5.99814 6.82486 5.99811 6.83403 5.99804C6.9033 5.99764 6.98966 5.99714 7.07486 6.20178C7.10763 6.28051 7.1556 6.39728 7.20616 6.52041C7.30843 6.76941 7.42146 7.04451 7.44133 7.08434C7.47106 7.14384 7.49086 7.21321 7.45123 7.29258C7.4453 7.30448 7.4398 7.31571 7.43453 7.32644C7.40476 7.38718 7.3829 7.43188 7.33236 7.49084C7.31253 7.51404 7.292 7.53904 7.27146 7.56404C7.23056 7.61384 7.1897 7.66364 7.1541 7.69911C7.09456 7.75838 7.03263 7.82268 7.10196 7.94168C7.1713 8.06068 7.40986 8.44991 7.7632 8.76508C8.14306 9.10388 8.4732 9.24708 8.64053 9.31968C8.6732 9.33384 8.69966 9.34534 8.7191 9.35504C8.8379 9.41458 8.90723 9.40461 8.9766 9.32531C9.04593 9.24598 9.27373 8.97821 9.35293 8.85924C9.43216 8.74028 9.51143 8.76011 9.62036 8.79974C9.72936 8.83944 10.3137 9.12698 10.4326 9.18644C10.4558 9.19808 10.4775 9.20858 10.4976 9.21828Z"
+                  fill="#262F45"
+                />
+              </svg>
+              Rojina
+            </h3>
+            <span>0424804666</span>
+          </div>
+
+          <div class="help-card-user">
+            <h3>
+              <svg
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 16.5C12.4183 16.5 16 12.9183 16 8.5C16 4.08173 12.4183 0.5 8 0.5C3.58173 0.5 0 4.08173 0 8.5C0 12.9183 3.58173 16.5 8 16.5Z"
+                  fill="#25D366"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.26383 12.9511H8.26186C7.4657 12.9508 6.6834 12.7511 5.98856 12.3721L3.4668 13.0336L4.14166 10.5685C3.72536 9.84711 3.50633 9.02874 3.50666 8.19034C3.50773 5.56748 5.64173 3.43359 8.26376 3.43359C9.53633 3.43414 10.7307 3.92954 11.6289 4.82874C12.527 5.72788 13.0213 6.92304 13.0208 8.19411C13.0198 10.8163 10.8866 12.95 8.26383 12.9511ZM6.10543 11.5109L6.2498 11.5966C6.85686 11.9568 7.55273 12.1474 8.26223 12.1477H8.26383C10.4431 12.1477 12.2168 10.374 12.2176 8.19381C12.2181 7.13734 11.8072 6.14394 11.0607 5.39658C10.3142 4.64921 9.32146 4.23744 8.26536 4.23708C6.08443 4.23708 4.31073 6.01064 4.30986 8.19061C4.30956 8.93771 4.5186 9.66531 4.91436 10.2948L5.0084 10.4444L4.60896 11.9034L6.10543 11.5109ZM10.4976 9.21828C10.5805 9.25834 10.6365 9.28541 10.6604 9.32531C10.6901 9.37488 10.6901 9.61284 10.5911 9.89054C10.492 10.1682 10.0171 10.4216 9.78876 10.4557C9.584 10.4863 9.32483 10.4991 9.0401 10.4086C8.86746 10.3538 8.6461 10.2807 8.3625 10.1582C7.2482 9.67708 6.49513 8.59704 6.3528 8.39294C6.34283 8.37864 6.33586 8.36864 6.33196 8.36344L6.33103 8.36218C6.26813 8.27824 5.84663 7.71588 5.84663 7.13384C5.84663 6.58634 6.11556 6.29938 6.23936 6.16728C6.24786 6.15821 6.25566 6.14988 6.26263 6.14228C6.3716 6.02328 6.50036 5.99351 6.5796 5.99351C6.65883 5.99351 6.73816 5.99424 6.80743 5.99771C6.81596 5.99814 6.82486 5.99811 6.83403 5.99804C6.9033 5.99764 6.98966 5.99714 7.07486 6.20178C7.10763 6.28051 7.1556 6.39728 7.20616 6.52041C7.30843 6.76941 7.42146 7.04451 7.44133 7.08434C7.47106 7.14384 7.49086 7.21321 7.45123 7.29258C7.4453 7.30448 7.4398 7.31571 7.43453 7.32644C7.40476 7.38718 7.3829 7.43188 7.33236 7.49084C7.31253 7.51404 7.292 7.53904 7.27146 7.56404C7.23056 7.61384 7.1897 7.66364 7.1541 7.69911C7.09456 7.75838 7.03263 7.82268 7.10196 7.94168C7.1713 8.06068 7.40986 8.44991 7.7632 8.76508C8.14306 9.10388 8.4732 9.24708 8.64053 9.31968C8.6732 9.33384 8.69966 9.34534 8.7191 9.35504C8.8379 9.41458 8.90723 9.40461 8.9766 9.32531C9.04593 9.24598 9.27373 8.97821 9.35293 8.85924C9.43216 8.74028 9.51143 8.76011 9.62036 8.79974C9.72936 8.83944 10.3137 9.12698 10.4326 9.18644C10.4558 9.19808 10.4775 9.20858 10.4976 9.21828Z"
+                  fill="#262F45"
+                />
+              </svg>
+              Narayan
+            </h3>
+            <span>0410479969</span>
+          </div>
+        </div>
+      </aside>
+      <div class="dashboard-content">
+        <!-- End of Dashboard Tabs -->
+        <div id="dashboardTabs" class="scrollable-tabs">
+          <button class="arrow-left arrow" data-active="false">
+            <i
+              class="iconify"
+              data-icon="material-symbols-light:keyboard-arrow-left"
+            ></i>
+          </button>
+          <div class="tabs">
+            <buttton class="tab tab-active" data-key="0" data-is-empty="false">
+              Upcomming
+            </buttton>
+            <buttton class="tab" data-key="1" data-is-empty="true">
+              Work History
+            </buttton>
+            <buttton class="tab" data-key="2" data-is-empty="true">
+              Client List
+            </buttton>
+            <buttton class="tab" data-key="3" data-is-empty="true">
+              Receipts List
+            </buttton>
+            <buttton class="tab" data-key="4" data-is-empty="true">
+              Follow up
+            </buttton>
+            <hr class="slide" />
+          </div>
+          <button class="arrow-right arrow" data-active="false">
+            <i
+              class="iconify"
+              data-icon="material-symbols-light:keyboard-arrow-right"
+            ></i>
+          </button>
+        </div>
+        <!-- End of Dashboard Tabs -->
+        <main>
+          <section class="upcomming__section">
+            <ul class="upcomming__task-group__list">
+              <li class="upcomming__task-group active">
+                <header>
+                  <h2>Today (2 tasks)</h2>
+                </header>
+                <div class="upcomming__task active">
+                  <h3>Tender Loving Care house</h3>
+                  <div class="icon-text__group">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:location-on"
+                    ></i>
+                    <sapn class="icon-text">
+                      33A Binna Burra Street,Villawood,NSW 2163
+                    </sapn>
+                    <a class="icon-link">view on map</a>
+                  </div>
+                  <div class="icon-text__group__list">
+                    <div class="icon-text__group">
+                      <i
+                        class="iconify"
+                        data-icon="material-symbols-light:calendar-month"
+                      ></i>
+                      <div class="icon-text">03/01/2025</div>
+                    </div>
+                    <div class="icon-text__group">
+                      <i
+                        class="iconify"
+                        data-icon="material-symbols-light:timer"
+                      ></i>
+                      <span class="icon-text">10:30 AM</span>
+                    </div>
+                  </div>
+                  <button class="btn empty icon btn__add-remark">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:add"
+                    ></i>
+                    <span class="btn-text">Add remarks</span>
+                  </button>
+                  <div class="upcomming__task-timer active">
+                    <button class="btn danger">Clock Out</button>
+                    <div class="upcomming__task-timer__info-wrapper">
+                      <div class="upcomming__task-timer__info">
+                        <h3>11:00 AM</h3>
+                        <div class="icon-text__group">
+                          <i
+                            class="iconify"
+                            data-icon="material-symbols-light:timer"
+                          ></i>
+                          <div class="icon-text">Clock In</div>
+                        </div>
+                      </div>
+                      <div class="upcomming__task-timer__info">
+                        <h3>2H 30m</h3>
+                        <div class="icon-text__group">
+                          <i
+                            class="iconify"
+                            data-icon="material-symbols-light:timelapse-outline"
+                          ></i>
+                          <div class="icon-text">Progress</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="upcomming__task active">
+                  <h3>Tender Loving Care house</h3>
+                  <div class="icon-text__group">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:location-on"
+                    ></i>
+                    <sapn class="icon-text">
+                      33A Binna Burra Street,Villawood,NSW 2163
+                    </sapn>
+                    <a class="icon-link">view on map</a>
+                  </div>
+                  <div class="icon-text__group__list">
+                    <div class="icon-text__group">
+                      <i
+                        class="iconify"
+                        data-icon="material-symbols-light:calendar-month"
+                      ></i>
+                      <div class="icon-text">03/01/2025</div>
+                    </div>
+                    <div class="icon-text__group">
+                      <i
+                        class="iconify"
+                        data-icon="material-symbols-light:timer"
+                      ></i>
+                      <span class="icon-text">10:30 AM</span>
+                    </div>
+                  </div>
+                  <!-- <button class="btn empty icon btn__add-remark">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:add"
+                    ></i>
+                    <span class="btn-text">Add remarks</span>
+                  </button> -->
+                  <div class="upcomming__task-timer">
+                    <button class="btn success">Clock In</button>
+                    <div class="upcomming__task-timer__info-wrapper">
+                      <!-- <div class="upcomming__task-timer__info">
+                        <h3>11:00 AM</h3>
+                        <div class="icon-text__group">
+                          <i
+                            class="iconify"
+                            data-icon="material-symbols-light:timer"
+                          ></i>
+                          <div class="icon-text">Clock In</div>
+                        </div>
+                      </div>
+                      <div class="upcomming__task-timer__info">
+                        <h3>2H 30m</h3>
+                        <div class="icon-text__group">
+                          <i
+                            class="iconify"
+                            data-icon="material-symbols-light:timelapse-outline"
+                          ></i>
+                          <div class="icon-text">Progress</div>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="upcomming__task-group">
+                <header>
+                  <h2>Wed 16 (3 tasks)</h2>
+                  <button class="upcomming__task-calendar">
+                    view on calendar
+                  </button>
+                </header>
+                <div class="upcomming__task">
+                  <h3>Tender Loving Care house</h3>
+                  <div class="icon-text__group">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:location-on"
+                    ></i>
+                    <sapn class="icon-text">
+                      33A Binna Burra Street,Villawood,NSW 2163
+                    </sapn>
+                    <a class="icon-link">view on map</a>
+                  </div>
+                  <div class="icon-text__group">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:calendar-month"
+                    ></i>
+                    <div class="icon-text">03/01/2025</div>
+                  </div>
+                </div>
+                <div class="upcomming__task">
+                  <h3>Tender Loving Care house</h3>
+                  <div class="icon-text__group">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:location-on"
+                    ></i>
+                    <sapn class="icon-text">
+                      33A Binna Burra Street,Villawood,NSW 2163
+                    </sapn>
+                    <a class="icon-link">view on map</a>
+                  </div>
+                  <div class="icon-text__group">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:calendar-month"
+                    ></i>
+                    <div class="icon-text">03/01/2025</div>
+                  </div>
+                </div>
+                <div class="upcomming__task">
+                  <h3>Tender Loving Care house</h3>
+                  <div class="icon-text__group">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:location-on"
+                    ></i>
+                    <sapn class="icon-text">
+                      33A Binna Burra Street,Villawood,NSW 2163
+                    </sapn>
+                    <a class="icon-link">view on map</a>
+                  </div>
+                  <div class="icon-text__group">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:calendar-month"
+                    ></i>
+                    <div class="icon-text">03/01/2025</div>
+                  </div>
+                </div>
+              </li>
+              <li class="upcomming__task-group">
+                <header>
+                  <h2>Fri 17 (1 task)</h2>
+                  <button class="upcomming__task-calendar">
+                    view on calendar
+                  </button>
+                </header>
+                <div class="upcomming__task">
+                  <h3>Tender Loving Care house</h3>
+                  <div class="icon-text__group">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:location-on"
+                    ></i>
+                    <sapn class="icon-text">
+                      33A Binna Burra Street,Villawood,NSW 2163
+                    </sapn>
+                    <a class="icon-link">view on map</a>
+                  </div>
+                  <div class="icon-text__group">
+                    <i
+                      class="iconify"
+                      data-icon="material-symbols-light:calendar-month"
+                    ></i>
+                    <div class="icon-text">03/01/2025</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <!-- <section></section>
+          <section></section>
+          <section></section>
+          <section></section> -->
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

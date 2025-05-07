@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../assets/library/faltpick-theme.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link rel="stylesheet" href="../assets/css/dialog.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard/main.css" />
+
+    <script type="module" src="../assets/scripts/tasks.js"></script>
+  </head>
+  <body>
+    <dialog id="clockoutDialog" class="delete-dialog">
+      <!-- <button id="DeletePopUpClose" class="close-btn">
+        <i class="iconify" data-icon="material-symbols:close"></i>
+      </button> -->
+      <p class="dialog-title">Are you sure you want to clock out?</p>
+      <!-- <p class="delete-dialog-description">
+        Are you sure you want to clock out?
+      </p> -->
+      <button class="btn outline cancel-btn">Cancel</button>
+      <button class="btn danger">Clock out</button>
+    </dialog>
+
+    <dialog id="clockinDialog" class="delete-dialog">
+      <!-- <button id="DeletePopUpClose" class="close-btn">
+        <i class="iconify" data-icon="material-symbols:close"></i>
+      </button> -->
+      <p class="dialog-title">Are you sure you want to clock in?</p>
+      <!-- <p class="delete-dialog-description">
+        Are you sure you want to clock In?
+      </p> -->
+      <button class="btn outline cancel-btn">Cancel</button>
+      <button class="btn success">Clock in</button>
+    </dialog>
+    <div class="dashboard__wrapper">
+      <header class="user-profile">
+        <div class="user-profile__img">
+          <img src="../assets/images/avatar.png" alt="Cat Winter" />
+        </div>
+        <span class="welcome__msg">Welcome 👋</span>
+        <span class="username">Suresh Sapkota</span>
+      </header>
+
+      <main>
+        <!-- Dashboard Tabs -->
+        <div id="dashboardTabs" class="scrollable-tabs">
+          <header class="task__tabs">
+            <buttton class="tab tab-active" data-value="today">Today</buttton>
+            <buttton class="tab" data-value="upcomming">Upcomming</buttton>
+            <buttton class="tab" data-value="history">Work History</buttton>
+            <div class="slide"></div>
+          </header>
+        </div>
+        <!-- End of Dashboard Tabs -->
+
+        <!-- Today's task -->
+        <section
+          class="today-tasks tasks"
+          data-section="today"
+          data-active="true"
+        >
+          <h2>Mar 29, Monday</h2>
+          <div class="today-task__card">
+            <h3>Tender Loving Care house</h3>
+            <div class="icon-text__group">
+              <i
+                class="iconify"
+                data-icon="material-symbols-light:location-on"
+              ></i>
+              <sapn class="icon-text">
+                33A Binna Burra Street,Villawood,NSW 2163
+              </sapn>
+            </div>
+
+            <div class="icon-text__group__list">
+              <div class="icon-text__group">
+                <i
+                  class="iconify"
+                  data-icon="material-symbols-light:calendar-month"
+                ></i>
+                <div class="icon-text">03/01/2025</div>
+              </div>
+              <div class="icon-text__group">
+                <i class="iconify" data-icon="material-symbols-light:timer"></i>
+                <span class="icon-text">10:30 AM</span>
+              </div>
+            </div>
+
+            <div class="btn__group">
+              <button class="btn empty icon btn__add-remark">
+                <i class="iconify" data-icon="material-symbols-light:add"></i>
+                <span class="btn-text">Add remarks</span>
+              </button>
+
+              <a href="">View on map</a>
+            </div>
+            <hr />
+
+            <div class="today-task__timer">
+              <button class="btn danger">Clock Out</button>
+              <div class="today-task-timer__info">
+                <span>11:00 AM</span>
+                <div class="icon-text__group">
+                  <i
+                    class="iconify"
+                    data-icon="material-symbols-light:timer"
+                  ></i>
+                  <span class="icon-text">Clock In</span>
+                </div>
+              </div>
+              <div class="today-task-timer__info">
+                <span>2H 30m</span>
+                <div class="icon-text__group">
+                  <i
+                    class="iconify"
+                    data-icon="material-symbols-light:timelapse-outline"
+                  ></i>
+                  <span class="icon-text">Progress</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="today-task__card">
+            <h3>Tender Loving Care house</h3>
+            <div class="icon-text__group">
+              <i
+                class="iconify"
+                data-icon="material-symbols-light:location-on"
+              ></i>
+              <sapn class="icon-text">
+                33A Binna Burra Street,Villawood,NSW 2163
+              </sapn>
+            </div>
+
+            <div class="icon-text__group__list">
+              <div class="icon-text__group">
+                <i
+                  class="iconify"
+                  data-icon="material-symbols-light:calendar-month"
+                ></i>
+                <div class="icon-text">03/01/2025</div>
+              </div>
+              <div class="icon-text__group">
+                <i class="iconify" data-icon="material-symbols-light:timer"></i>
+                <span class="icon-text">10:30 AM</span>
+              </div>
+            </div>
+
+            <div class="btn__group">
+              <button class="btn empty icon btn__add-remark">
+                <i class="iconify" data-icon="material-symbols-light:add"></i>
+                <span class="btn-text">Add remarks</span>
+              </button>
+
+              <a href="">View on map</a>
+            </div>
+            <hr />
+
+            <div class="today-task__timer">
+              <button class="btn success">Clock In</button>
+              <div class="today-task-timer__info" inert>
+                <span>11:00 AM</span>
+                <div class="icon-text__group">
+                  <i
+                    class="iconify"
+                    data-icon="material-symbols-light:timer"
+                  ></i>
+                  <span class="icon-text">Clock In</span>
+                </div>
+              </div>
+              <div class="today-task-timer__info" inert>
+                <span>2H 30m</span>
+                <div class="icon-text__group">
+                  <i
+                    class="iconify"
+                    data-icon="material-symbols-light:timelapse-outline"
+                  ></i>
+                  <span class="icon-text">Progress</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of Today's task -->
+
+        <!-- Upcomming Tasks -->
+        <section
+          class="today-tasks tasks"
+          data-section="upcomming"
+          data-active="false"
+        >
+          <div class="datepicker__wrapper"><div id="datepicker"></div></div>
+          <h2>Total task (3)</h2>
+          <div class="today-task__card">
+            <h3>Tender Loving Care house</h3>
+            <div class="icon-text__group">
+              <i
+                class="iconify"
+                data-icon="material-symbols-light:location-on"
+              ></i>
+              <sapn class="icon-text">
+                33A Binna Burra Street,Villawood,NSW 2163
+              </sapn>
+            </div>
+
+            <div class="icon-text__group__list">
+              <div class="icon-text__group">
+                <i
+                  class="iconify"
+                  data-icon="material-symbols-light:calendar-month"
+                ></i>
+                <div class="icon-text">03/01/2025</div>
+              </div>
+              <div class="icon-text__group">
+                <i class="iconify" data-icon="material-symbols-light:timer"></i>
+                <span class="icon-text">10:30 AM</span>
+              </div>
+            </div>
+
+            <div class="btn__group">
+              <a href="">View on map</a>
+            </div>
+          </div>
+          <div class="today-task__card">
+            <h3>Tender Loving Care house</h3>
+            <div class="icon-text__group">
+              <i
+                class="iconify"
+                data-icon="material-symbols-light:location-on"
+              ></i>
+              <sapn class="icon-text">
+                33A Binna Burra Street,Villawood,NSW 2163
+              </sapn>
+            </div>
+
+            <div class="icon-text__group__list">
+              <div class="icon-text__group">
+                <i
+                  class="iconify"
+                  data-icon="material-symbols-light:calendar-month"
+                ></i>
+                <div class="icon-text">03/01/2025</div>
+              </div>
+              <div class="icon-text__group">
+                <i class="iconify" data-icon="material-symbols-light:timer"></i>
+                <span class="icon-text">10:30 AM</span>
+              </div>
+            </div>
+
+            <div class="btn__group">
+              <a href="">View on map</a>
+            </div>
+          </div>
+        </section>
+        <!-- End of Upcomming Tasks -->
+
+        <!-- Work History -->
+        <section
+          class="upcomming-tasks tasks"
+          data-section="history"
+          data-active="false"
+        >
+          <!-- <div class="datepicker__wrapper"><div id="datepicker"></div></div> -->
+          <!-- <h2>Total task (3)</h2> -->
+          <div class="today-task__card">
+            <h3><a href="">Tender Loving Care house</a></h3>
+            <div class="icon-text__group">
+              <i
+                class="iconify"
+                data-icon="material-symbols-light:location-on"
+              ></i>
+              <sapn class="icon-text">
+                33A Binna Burra Street,Villawood,NSW 2163
+              </sapn>
+            </div>
+
+            <div class="icon-text__group__list-2">
+              <div class="icon-text__group">
+                <i
+                  class="iconify"
+                  data-icon="material-symbols-light:calendar-month"
+                ></i>
+                <div class="icon-text">03/01/2025</div>
+              </div>
+              <hr />
+              <div class="icon-text__group">
+                <i class="iconify" data-icon="material-symbols-light:timer"></i>
+                <span class="icon-text">Time logged: 2h</span>
+              </div>
+              <hr />
+              <div class="icon-text__group">
+                <i class="iconify" data-icon="material-symbols-light:timer"></i>
+                <span class="icon-text">Total invoice: $30</span>
+              </div>
+            </div>
+
+            <div class="btn__group">
+              <a href="">view on map</a>
+            </div>
+
+            <div class="task__review">
+              <div class="task__rating">
+                <div class="task__rating-stars">
+                  <i
+                    class="iconify"
+                    data-icon="material-symbols:star-rounded"
+                  ></i>
+                  <i
+                    class="iconify"
+                    data-icon="material-symbols:star-rounded"
+                  ></i>
+                  <i
+                    class="iconify"
+                    data-icon="material-symbols:star-rounded"
+                  ></i>
+                  <i
+                    class="iconify"
+                    data-icon="material-symbols:star-rounded"
+                  ></i>
+                </div>
+                <span class="tasks__rating-point">4.0</span>
+              </div>
+              <p class="task__review-text text-ellipsis">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+                molestias facilis similique quasi aliquid rem provident animi
+                delectus quo dicta perspiciatis iusto velit repudiandae commodi
+                debitis repellat voluptatibus exercitationem, voluptates illo
+                voluptatem molestiae odio in dolores labore? Fuga hic ducimus,
+                facere quae quidem sed praesentium adipisci assumenda mollitia
+                veniam velit illum laboriosam fugit quibusdam saepe
+                reprehenderit sit ex nisi soluta, architecto deserunt doloremque
+                molestiae delectus et. Quaerat adipisci, minus eveniet quis
+                magni impedit inventore neque accusantium eligendi non hic
+                consequuntur culpa cum ipsa exercitationem suscipit sed dolor
+                natus quibusdam aut at blanditiis? Fuga vel eius accusamus,
+                impedit soluta amet quis.
+              </p>
+            </div>
+          </div>
+          <div class="today-task__card">
+            <h3><a href="">Tender Loving Care house</a></h3>
+            <div class="icon-text__group">
+              <i
+                class="iconify"
+                data-icon="material-symbols-light:location-on"
+              ></i>
+              <sapn class="icon-text">
+                33A Binna Burra Street,Villawood,NSW 2163
+              </sapn>
+            </div>
+
+            <div class="icon-text__group__list-2">
+              <div class="icon-text__group">
+                <i
+                  class="iconify"
+                  data-icon="material-symbols-light:calendar-month"
+                ></i>
+                <div class="icon-text">03/01/2025</div>
+              </div>
+              <hr />
+              <div class="icon-text__group">
+                <i class="iconify" data-icon="material-symbols-light:timer"></i>
+                <span class="icon-text">Time logged: 2h</span>
+              </div>
+              <hr />
+              <div class="icon-text__group">
+                <i class="iconify" data-icon="material-symbols-light:timer"></i>
+                <span class="icon-text">Total invoice: $30</span>
+              </div>
+            </div>
+
+            <div class="btn__group">
+              <a href="">view on map</a>
+            </div>
+          </div>
+        </section>
+        <!-- End of Work History -->
+      </main>
+
+      <footer class="footer__nav">
+        <nav class="primary__nav">
+          <a href="./index.html" class="nav__link">
+            <i class="iconify" data-icon="material-symbols:home"> </i>
+            <span>Home</span>
+          </a>
+
+          <a href="./clients.html" class="nav__link">
+            <i
+              class="iconify"
+              data-icon="material-symbols:supervisor-account-outline"
+            >
+            </i>
+            <span>Clients</span>
+          </a>
+
+          <a href="./tasks.html" class="nav__link active">
+            <i class="iconify" data-icon="material-symbols:task"></i>
+            <span>My Tasks</span>
+          </a>
+
+          <a href="./help.html" class="nav__link">
+            <i class="iconify" data-icon="material-symbols:help-center-outline">
+            </i>
+            <span>Help</span>
+          </a>
+
+          <a href="./profile.html" class="nav__link">
+            <i class="iconify" data-icon="material-symbols:account-box-outline">
+            </i>
+            <span>Profile</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
